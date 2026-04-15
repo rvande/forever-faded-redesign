@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Barlow, Source_Sans_3 } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ScrollObserver from "@/components/ScrollObserver";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -41,6 +42,7 @@ export default function RootLayout({
       className={`${bebasNeue.variable} ${barlow.variable} ${sourceSans3.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+          <ScrollObserver />
           <Nav />
           {children}
           <Footer />

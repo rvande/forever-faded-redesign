@@ -103,7 +103,7 @@ export default function ExploreStyles() {
       <div className="max-w-5xl mx-auto">
 
         {/* ── Heading ── */}
-        <div className="mb-8">
+        <div className="mb-8" data-reveal>
           <h2 className="font-heading leading-none">
             <span className="block text-5xl sm:text-6xl lg:text-7xl text-gold">
               Explore

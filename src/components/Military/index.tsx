@@ -13,7 +13,7 @@ export default function Military() {
     >
       <div className="max-w-5xl mx-auto px-8 sm:px-12 lg:px-16 py-14">
         {/* Offset wrapper — right + bottom bleed */}
-        <div className="relative pr-4 pb-4">
+        <div className="relative pr-4 pb-4" data-reveal>
           {/* Gold offset box */}
           <div className="absolute top-[-15px] left-4 right-0 bottom-10 border-2 border-gold bg-transparent z-0" />
 

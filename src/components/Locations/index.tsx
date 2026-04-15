@@ -111,14 +111,17 @@ export default function Locations() {
     >
       <h2
         id="locations-heading"
+        data-reveal
         className="font-heading text-5xl sm:text-6xl lg:text-8xl text-white text-center mb-12 sm:mb-16"
       >
         Our Locations
       </h2>
 
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-        {LOCATIONS.map((loc) => (
-          <LocationCard key={loc.city} loc={loc} />
+        {LOCATIONS.map((loc, i) => (
+          <div key={loc.city} data-reveal data-delay={String(i + 1)}>
+            <LocationCard loc={loc} />
+          </div>
         ))}
       </div>
     </section>

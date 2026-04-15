@@ -25,7 +25,7 @@ export default function Welcome() {
 
       {/* ── Content ── */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 py-16 lg:py-24">
-        <div className="max-w-lg">
+        <div className="max-w-lg" data-reveal>
 
           {/* Heading */}
           <h2 className="font-heading leading-none mb-8">

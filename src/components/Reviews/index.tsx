@@ -82,7 +82,7 @@ export default function Reviews() {
     <section aria-labelledby="reviews-heading" className="bg-white py-16 px-8 sm:px-12 lg:px-16">
       <div className="max-w-6xl mx-auto">
 
-        <div className="text-center mb-10">
+        <div className="text-center mb-10" data-reveal>
           <h2 id="reviews-heading" className="font-heading leading-none">
             <span className="block text-5xl sm:text-6xl lg:text-7xl text-black">What Our</span>
             <span className="block text-5xl sm:text-6xl lg:text-7xl text-gold">Clients Say</span>
@@ -96,8 +96,10 @@ export default function Reviews() {
 
         {/* Desktop — static 3-up grid, 2 rows */}
         <div className="hidden lg:grid grid-cols-3 gap-5">
-          {REVIEWS.map((r) => (
-            <ReviewCard key={r.author} review={r} />
+          {REVIEWS.map((r, i) => (
+            <div key={r.author} data-reveal data-delay={String((i % 3) + 1)}>
+              <ReviewCard review={r} />
+            </div>
           ))}
         </div>
 

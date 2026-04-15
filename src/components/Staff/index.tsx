@@ -94,16 +94,21 @@ export default function Staff() {
     <section className="bg-gold py-16 sm:py-20 px-6 sm:px-12 lg:px-20" aria-labelledby="staff-heading">
       <h2
         id="staff-heading"
+        data-reveal
         className="font-heading text-5xl sm:text-6xl lg:text-7xl text-black text-center mb-10 sm:mb-14"
       >
         Meet the Team
       </h2>
 
       <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
-        {STAFF.map((m) => (
-          <StaffCard key={m.name} member={m} />
+        {STAFF.map((m, i) => (
+          <div key={m.name} data-reveal data-delay={String((i % 3) + 1)}>
+            <StaffCard member={m} />
+          </div>
         ))}
-        <HiringCard />
+        <div data-reveal data-delay="1">
+          <HiringCard />
+        </div>
       </div>
     </section>
   );

@@ -23,7 +23,7 @@ export default function Hero() {
 
       {/* ── Content ── */}
       <div className="relative z-10 h-full flex items-center px-8 sm:px-12 lg:px-20">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl" data-reveal>
 
           <h1 className="font-heading leading-none mb-4">
             <span className="block text-6xl sm:text-7xl lg:text-8xl xl:text-9xl text-white">

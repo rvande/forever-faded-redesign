@@ -28,7 +28,7 @@ export default function Classics() {
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 py-16 lg:py-24 flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
 
         {/* ── Left: Content ── */}
-        <div className="flex-1 w-full">
+        <div className="flex-1 w-full" data-reveal>
           {/* Heading */}
           <h2 className="font-heading leading-none mb-8">
             <span className="block text-6xl sm:text-7xl lg:text-8xl text-black">
@@ -79,7 +79,7 @@ export default function Classics() {
         </div>
 
         {/* ── Right: Offset Card ── */}
-        <div className="w-full lg:w-[42%] shrink-0 flex justify-center lg:justify-end">
+        <div className="w-full lg:w-[42%] shrink-0 flex justify-center lg:justify-end" data-reveal data-delay="2">
           {/*
             Wrapper has left + bottom padding to create bleed room.
             Gold box fills from left=0 and bottom=0 of the wrapper,

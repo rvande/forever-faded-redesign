@@ -36,7 +36,7 @@ export default function WhyUs() {
       <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-16 pt-8 pb-14 flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
 
         {/* ── Content — first in DOM = first on mobile ── */}
-        <div className="flex-1">
+        <div className="flex-1" data-reveal>
           <h2 className="font-heading leading-none mb-10">
             <span className="block text-7xl sm:text-8xl lg:text-9xl text-black">
               Why Choose
@@ -64,7 +64,7 @@ export default function WhyUs() {
         </div>
 
         {/* ── Image — second in DOM = second on mobile, left on desktop via flex-row-reverse ── */}
-        <div className="shrink-0 w-full max-w-[320px] lg:max-w-[380px]">
+        <div className="shrink-0 w-full max-w-[320px] lg:max-w-[380px]" data-reveal data-delay="2">
           <div className="relative pb-5 pr-5">
             <div className="absolute top-5 left-5 right-0 bottom-0 bg-black z-0" />
             <div className="relative z-10 overflow-hidden">
