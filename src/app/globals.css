@@ -1,26 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@700&family=Source+Sans+3:ital,wght@0,500;1,500&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ── Brand Colors ── */
+  --color-white:  #ffffff;
+  --color-black:  #000000;
+  --color-gold:   #DBA94B;
+  --color-tan:    #FEEFD9;
+  --color-gray:   #343434;
+
+  /* ── Semantic Surface ── */
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+
+  /* ── Typography ── */
+  --font-heading:    'Bebas Neue', sans-serif;
+  --font-subheading: 'Barlow', sans-serif;
+  --font-body:       'Source Sans 3', sans-serif;
+
+  /* ── Letter Spacing ── */
+  --tracking-heading: -0.04em;
+  --tracking-tight:   -0.02em;
+  --tracking-wide:    0.05em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Heading Utility ── */
+.font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: var(--tracking-heading);
+  text-transform: uppercase;
+  font-weight: 400; /* Bebas Neue is a single-weight display face */
+}
+
+.font-subheading {
+  font-family: var(--font-subheading);
+  font-weight: 700;
+}
+
+.font-body {
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+/* ── Barber Pole Scrollbar ── */
+
+/* Webkit — Chrome, Safari, Edge */
+/* Animation driven by --barber-offset CSS var updated via JS (BarberPole component)
+   because Chrome does not support CSS @keyframes on scrollbar pseudo-elements. */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #cc0000 0px,
+    #cc0000 8px,
+    #ffffff 8px,
+    #ffffff 16px,
+    #1a3a8f 16px,
+    #1a3a8f 24px
+  );
+  border-radius: 0;
+}
+
+/* Firefox only — solid fallback */
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #cc0000 #000000;
+  }
 }
