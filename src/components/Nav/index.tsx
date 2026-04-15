@@ -185,6 +185,15 @@ export default function Nav() {
               </Link>
             </li>
           </ul>
+          <div className="flex justify-center pt-4 pb-8">
+            <Image
+              src="/logo-light.png"
+              alt="Forever Faded"
+              width={400}
+              height={400}
+              className=""
+            />
+          </div>
         </div>
       </nav>
     </header>
