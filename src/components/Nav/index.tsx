@@ -140,25 +140,42 @@ export default function Nav() {
           </div>
         </div>
 
-        {/* ── Mobile Drawer ── */}
+        {/* ── Mobile Drawer — slides from right ── */}
+        {mobileOpen && (
+          <div
+            className="md:hidden fixed inset-0 z-40"
+            onClick={() => setMobileOpen(false)}
+          />
+        )}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            mobileOpen ? "max-h-96" : "max-h-0"
+          className={`md:hidden fixed top-0 right-0 z-50 h-full w-72 bg-white shadow-xl transition-transform duration-300 ${
+            mobileOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <ul className="flex flex-col border-t border-black/10">
+          <div className="flex items-center justify-end px-5 h-16 border-b border-black/10">
+            <button
+              onClick={() => setMobileOpen(false)}
+              aria-label="Close menu"
+              className="w-8 h-8 flex items-center justify-center text-black/60 hover:text-black"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <ul className="flex flex-col">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center px-6 py-4 font-subheading text-[13px] tracking-widest uppercase text-black hover:text-gold hover:bg-black/5 transition-colors"
+                  className="flex items-center px-6 py-4 font-subheading text-[13px] tracking-widest uppercase text-black hover:text-gold hover:bg-black/5 transition-colors border-b border-black/5"
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
-            <li className="px-6 py-4">
+            <li className="px-6 py-5">
               <Link
                 href="#booking"
                 onClick={() => setMobileOpen(false)}

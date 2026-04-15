@@ -125,7 +125,7 @@ export default function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
             aria-label={`Review ${i + 1}`}
             onClick={() => goTo(i, i > idx ? "next" : "prev")}
             className={`rounded-full transition-all duration-300 ${
-              i === idx ? "w-6 h-2 bg-gold" : "w-2 h-2 bg-white/30 hover:bg-white/60"
+              i === idx ? "w-6 h-2 bg-gold" : "w-2 h-2 bg-black/20 hover:bg-black/40"
             }`}
           />
         ))}
