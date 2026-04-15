@@ -70,7 +70,7 @@ function StaffCard({ member }: { member: Member }) {
 
 function HiringCard() {
   return (
-    <div className="col-span-2 sm:col-span-1 flex flex-row sm:flex-col items-center justify-between sm:justify-center gap-4 sm:gap-0 bg-black px-6 py-6 sm:py-10 text-center sm:text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.15)]">
+    <div className="flex flex-row sm:flex-col items-center justify-between sm:justify-center gap-4 sm:gap-0 bg-black px-6 py-6 sm:py-10 text-center sm:text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.15)]">
       <div className="flex flex-col sm:items-center text-left sm:text-center">
         <p className="font-heading text-2xl sm:text-4xl text-gold leading-none sm:mb-3">
           We Are Hiring!
@@ -106,7 +106,7 @@ export default function Staff() {
             <StaffCard member={m} />
           </div>
         ))}
-        <div data-reveal data-delay="1">
+        <div data-reveal data-delay="1" className="col-span-2 sm:col-span-1">
           <HiringCard />
         </div>
       </div>
