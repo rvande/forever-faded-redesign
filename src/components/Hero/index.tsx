@@ -4,15 +4,26 @@ export default function Hero() {
   return (
     <section className="relative w-full h-screen min-h-[600px] max-h-[900px] overflow-hidden">
 
-      {/* ── Full-bleed video ── */}
+      {/* ── Full-bleed video — desktop ── */}
       <video
-        src="/hero-drone.mp4"
+        src="https://res.cloudinary.com/dmlijbube/video/upload/q_auto,f_auto/herovideo_bnt6ye"
         autoPlay
         muted
         loop
         playsInline
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className="hidden sm:block absolute inset-0 w-full h-full object-cover object-center"
+      />
+
+      {/* ── Full-bleed video — mobile ── */}
+      <video
+        src="https://res.cloudinary.com/dmlijbube/video/upload/q_auto,f_auto/mobile-hero_mp9pjk"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+        className="sm:hidden absolute inset-0 w-full h-full object-cover object-center"
       />
 
       {/* ── Gradient overlay: dark left, fades right ── */}
