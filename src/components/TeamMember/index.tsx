@@ -10,7 +10,8 @@ export type TeamMemberData = {
   role: string;
   publicId: string;
   bio: string;
-  isOwner?: boolean;
+  bookHref: string;
+  ctaLabel?: string;
 };
 
 type Props = {
@@ -53,8 +54,8 @@ export default function TeamMember({ member, flip, index }: Props) {
           <p key={i}>{para}</p>
         ))}
       </div>
-      <Link
-        href="https://getsquire.com/booking/brands/forever-faded-llc"
+      <a
+        href={member.bookHref}
         target="_blank"
         rel="noopener noreferrer"
         className={`inline-flex self-start items-center bg-gold text-black font-subheading text-base tracking-widest uppercase px-8 py-3 hover:bg-gold/90 transition-colors ${
@@ -63,8 +64,8 @@ export default function TeamMember({ member, flip, index }: Props) {
             : "shadow-[4px_4px_0px_0px_#000000]"
         }`}
       >
-        {member.isOwner ? "Contact" : "Book Now"}
-      </Link>
+        {member.ctaLabel ?? "Book Now"}
+      </a>
     </div>
   );
 
