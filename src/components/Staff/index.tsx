@@ -19,7 +19,7 @@ const STAFF: Member[] = [
   { name: "Juan", role: "Barber", publicId: "IMG_20250422_130312_67e66a64fd_1_icbizv_pbq7vi",    bookHref: "#" },
   { name: "Bryan",role: "Barber", publicId: "DSC_09834_Enhanced_NR_d3de03f948_1_servz5",         bookHref: "#" },
   { name: "Davy",   role: "Barber", publicId: "thumbnail_IMG_20250502_064651_217ca107b0_1_aw3awf", bookHref: "#" },
-  { name: "Cristian",     role: "Barber",  publicId: "Staff_6_2ee1235f98_1_ccjps2",                       bookHref: "#", isOwner: true },
+  { name: "Cristian",     role: "Barber",  publicId: "Staff_6_2ee1235f98_1_ccjps2",                       bookHref: "https://getsquire.com/booking/brands/forever-faded-llc", isOwner: true },
   { name: "Tim",    role: "Owner", publicId: "DSC_09829_Enhanced_NR_52880fb2fe_1_j65c0d",         bookHref: "#" },
   { name: "Chelsea",   role: "Barber", publicId: "thumbnail_image1_2d7a788be4_1_anpiza",              bookHref: "#" },
   { name: "Megan",    role: "Barber", publicId: "IMG_3315_91e21665f4_1_sgilqi",                      bookHref: "#" },
@@ -53,12 +53,14 @@ function StaffCard({ member }: { member: Member }) {
       <div className="flex gap-1.5 px-3 pb-3 mt-2">
         <a
           href={member.bookHref}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex-1 text-center bg-black text-white font-subheading text-[10px] sm:text-[11px] tracking-widest uppercase py-2 hover:bg-gold hover:text-black transition-colors"
         >
           {member.isOwner ? "Contact" : "Book"}
         </a>
         <Link
-          href="/staff"
+          href={`/staff#${member.name.toLowerCase()}`}
           className="flex-1 text-center border border-black text-black font-subheading text-[10px] sm:text-[11px] tracking-widest uppercase py-2 hover:bg-black hover:text-white transition-colors"
         >
           Read Bio
