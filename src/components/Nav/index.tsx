@@ -48,10 +48,10 @@ export default function Nav() {
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 11H11V7h1.5v5.25l4.5 2.67-.75 1.23L12.5 13z" />
               </svg>
               <span className="font-subheading text-[11px] tracking-wide uppercase text-black/60 hidden sm:inline">
-                Mon–Sat: 8am – 8pm
+                Mon–Sat: 10am – 6pm
               </span>
               <span className="font-subheading text-[11px] tracking-wide uppercase text-black/60 sm:hidden">
-                8am – 8pm
+                10am – 6pm
               </span>
             </div>
 
@@ -108,8 +108,10 @@ export default function Nav() {
             {/* Book Now + Hamburger */}
             <div className="flex items-center gap-4">
               <Link
-                href="#booking"
-                className="hidden sm:inline-flex items-center bg-gold text-black font-subheading text-[13px] tracking-widest uppercase px-6 py-2.5 shadow-[4px_4px_0px_0px_#000000] hover:bg-gold/90 transition-colors"
+                href="https://getsquire.com/booking/brands/forever-faded-llc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:inline-flex items-center bg-gold text-black font-subheading text-base tracking-widest uppercase px-6 py-2.5 shadow-[4px_4px_0px_0px_#000000] hover:bg-gold/90 transition-colors"
               >
                 Book Now
               </Link>
@@ -177,9 +179,11 @@ export default function Nav() {
             ))}
             <li className="px-6 py-5">
               <Link
-                href="#booking"
+                href="https://getsquire.com/booking/brands/forever-faded-llc"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center bg-gold text-black font-subheading text-[13px] tracking-widest uppercase py-3 hover:bg-gold/90 transition-colors"
+                className="flex items-center justify-center bg-gold text-black font-subheading text-base tracking-widest uppercase py-3 hover:bg-gold/90 transition-colors"
               >
                 Book Now
               </Link>

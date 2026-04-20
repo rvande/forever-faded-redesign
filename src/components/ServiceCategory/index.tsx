@@ -57,7 +57,9 @@ export default function ServiceCategory({ categoryNumber, name, services, theme 
         {/* CTA */}
         <div className="mt-10" data-reveal data-delay="2">
           <Link
-            href="#booking"
+            href="https://getsquire.com/booking/brands/forever-faded-llc"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`inline-flex items-center bg-gold text-black font-subheading text-base tracking-widest uppercase px-8 py-3 hover:bg-gold/90 transition-colors ${
               isDark
                 ? "shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]"

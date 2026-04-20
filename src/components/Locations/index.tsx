@@ -1,10 +1,10 @@
 const HOURS: [string, string][] = [
-  ["Monday",    "8AM – 8PM"],
-  ["Tuesday",   "8AM – 8PM"],
-  ["Wednesday", "8AM – 8PM"],
-  ["Thursday",  "8AM – 8PM"],
-  ["Friday",    "8AM – 8PM"],
-  ["Saturday",  "8AM – 8PM"],
+  ["Monday",    "10AM – 6PM"],
+  ["Tuesday",   "10AM – 6PM"],
+  ["Wednesday", "10AM – 6PM"],
+  ["Thursday",  "10AM – 6PM"],
+  ["Friday",    "10AM – 6PM"],
+  ["Saturday",  "10AM – 6PM"],
   ["Sunday",    "Closed"],
 ];
 
@@ -22,14 +22,14 @@ const LOCATIONS: Location[] = [
     city: "Waukesha",
     address: ["1427 E Racine Ave #H,", "Waukesha, WI 53186"],
     mapsHref: "https://www.google.com/maps?cid=5172250936097981129",
-    bookHref: "#",
+    bookHref: "https://getsquire.com/booking/brands/forever-faded-llc",
     embedSrc: "https://maps.google.com/maps?cid=5172250936097981129&output=embed",
   },
   {
     city: "Oconomowoc",
     address: ["Address Coming Soon,", "Oconomowoc, WI"],
     mapsHref: "#",
-    bookHref: "#",
+    bookHref: "https://getsquire.com/booking/brands/forever-faded-llc",
     comingSoon: true,
   },
 ];
@@ -88,7 +88,9 @@ function LocationCard({ loc }: { loc: Location }) {
           {!loc.comingSoon ? (
             <a
               href={loc.bookHref}
-              className="mt-5 inline-block font-subheading text-[11px] tracking-widest uppercase px-6 py-3 bg-gold text-black hover:bg-gold/90 shadow-[3px_3px_0px_0px_rgba(255,255,255,0.15)] transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-block font-subheading text-base tracking-widest uppercase px-6 py-3 bg-gold text-black hover:bg-gold/90 shadow-[3px_3px_0px_0px_rgba(255,255,255,0.15)] transition-colors"
             >
               Book Here
             </a>

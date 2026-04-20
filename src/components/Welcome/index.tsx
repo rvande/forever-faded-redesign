@@ -52,18 +52,23 @@ export default function Welcome() {
               welcoming environment.
             </p>
             <p className="font-body text-sm sm:text-base text-white/80 lg:text-black leading-relaxed">
-              Located conveniently in Waukesha, Wisconsin, we&apos;re proud to serve clients from
-              across Waukesha County and surrounding areas—including Brookfield, Pewaukee,
-              and New Berlin. Don&apos;t settle for less—get faded by the best in Waukesha. Book
-              your appointment today or stop by to experience the Forever Faded difference.
+              With locations in Waukesha and coming soon to Oconomowoc, we&apos;re proud to serve
+              clients across Waukesha County and surrounding areas—including Brookfield, Pewaukee,
+              New Berlin, and Lake Country. Book your appointment today or stop by to experience
+              the Forever Faded difference.
+            </p>
+            <p className="font-body text-sm sm:text-base text-white/80 lg:text-black leading-relaxed font-bold">
+              IF YOU CAN GROW IT! WE CAN CUT IT!
             </p>
           </div>
 
           {/* CTAs */}
           <div className="flex flex-wrap items-center gap-4">
             <Link
-              href="#booking"
-              className="inline-flex items-center justify-center bg-gold text-black shadow-[4px_4px_0px_0px_#000000] lg:bg-black lg:text-white lg:shadow-none font-subheading text-[13px] tracking-widest uppercase px-8 py-3 hover:bg-gold/90 lg:hover:bg-black/80 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black lg:focus-visible:outline-white"
+              href="https://getsquire.com/booking/brands/forever-faded-llc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-gold text-black shadow-[4px_4px_0px_0px_#000000] lg:bg-black lg:text-white lg:shadow-none font-subheading text-base tracking-widest uppercase px-8 py-3 hover:bg-gold/90 lg:hover:bg-black/80 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black lg:focus-visible:outline-white"
             >
               Book Now
             </Link>

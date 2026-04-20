@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ServicesSEO() {
@@ -5,7 +6,17 @@ export default function ServicesSEO() {
     <section className="bg-black">
       <div className="max-w-4xl mx-auto px-8 sm:px-12 lg:px-16 py-16 lg:py-24">
 
-        <div className="space-y-6 mb-12" data-reveal>
+        {/* Logo */}
+        <div className="flex justify-center mb-10" data-reveal>
+          <Image
+            src="/dark-logo.png"
+            alt="Forever Faded"
+            width={180}
+            height={180}
+          />
+        </div>
+
+        <div className="space-y-6 mb-12" data-reveal data-delay="1">
           <p className="font-body text-sm sm:text-base text-white/80 leading-relaxed">
             Forever Faded Barber Shop is Waukesha County&apos;s premier destination for
             precision cuts, fresh fades, and expert grooming. Whether you&apos;re booking a
@@ -16,8 +27,8 @@ export default function ServicesSEO() {
 
           <p className="font-body text-sm sm:text-base text-white/80 leading-relaxed">
             Our Face &amp; Beard menu is built for the guy who demands the details — from a
-            quick beard lining at our Waukesha barbershop to a full facial and hot shave
-            that leaves you looking sharp for the week. Eyebrow cleanup, full beard trims,
+            quick beard lining at our Waukesha barbershop to a full facial that leaves you
+            looking sharp for the week. Eyebrow cleanup, full beard trims,
             adult cuts paired with beard work — we do it all under one roof.
           </p>
 
@@ -41,9 +52,11 @@ export default function ServicesSEO() {
           </p>
         </div>
 
-        <div data-reveal data-delay="1">
+        <div data-reveal data-delay="2">
           <Link
-            href="#booking"
+            href="https://getsquire.com/booking/brands/forever-faded-llc"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center bg-gold text-black font-subheading text-base tracking-widest uppercase px-10 py-4 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] hover:bg-gold/90 transition-colors"
           >
             Book Now

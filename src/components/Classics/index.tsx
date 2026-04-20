@@ -16,9 +16,9 @@ const SERVICES = [
   },
   {
     number: "03",
-    name: "Beard & Head Lining",
+    name: "Taper and beard lining",
     description: "Precision tapering using multiple guard lengths for a seamless transition.",
-    price: "$45+",
+    price: "$30+",
   },
 ];
 
@@ -64,8 +64,10 @@ export default function Classics() {
           {/* CTAs */}
           <div className="flex items-center gap-4 mt-10">
             <Link
-              href="#booking"
-              className="inline-flex items-center bg-gold text-black font-subheading text-[13px] tracking-widest uppercase px-7 py-3 shadow-[4px_4px_0px_0px_#000000] hover:bg-gold/90 transition-colors"
+              href="https://getsquire.com/booking/brands/forever-faded-llc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-gold text-black font-subheading text-base tracking-widest uppercase px-7 py-3 shadow-[4px_4px_0px_0px_#000000] hover:bg-gold/90 transition-colors"
             >
               Book Now
             </Link>
