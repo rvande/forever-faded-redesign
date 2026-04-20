@@ -17,7 +17,7 @@ const TEAM: TeamMemberData[] = [
     slug: "angel",
     role: "Barber",
     publicId: "Angel_1996c92994_1_x37hwz",
-    bio: PLACEHOLDER("Angel"),
+    bio: "Being a barber was unexpected, but I don't regret it for a second. Growing up, I never imagined that cutting hair would become my career. I had other dreams, and barbering wasn't even on my radar. But life has a way of surprising you, and sometimes the best paths are the ones you never saw coming.\n\nIt all started when I began cutting hair for friends. At first, it was just a fun thing to do on the side, but I soon realized how much I enjoyed it. I saw how a haircut could change someone's look and boost their confidence. I started to see how much people appreciated the small details and effort I put into my work, and that was a big turning point — it made me realize I could turn this skill into something more than just a hobby.\n\nI started working at Forever Faded in 2023 and I have been more than grateful for all the people I've met. Working here made me realize how much I loved the creative aspect of barbering. I started to master different techniques and most importantly, build real connections with every client who sits in my chair.",
     bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/angel-rafael/services",
   },
   {
@@ -49,7 +49,7 @@ const TEAM: TeamMemberData[] = [
     slug: "cristian",
     role: "Barber",
     publicId: "Staff_6_2ee1235f98_1_ccjps2",
-    bio: PLACEHOLDER("Cristian"),
+    bio: "I started on a path to get my life together and finally set a course for my future. That started with barbering — I went to school at the Aveda Institute of Beauty and Wellness, earning my cosmetology degree. I started school there October 16th of 2023, being voted class leader shortly after, gaining experience in a leadership position and helping everybody succeed.\n\nIn March of 2024 I started my job at Forever Faded, attending school Mon–Wed 10–9 and working Thu–Sat 10–6. The grueling 57-hour weeks gave me a new sense of dedication and determination, improving my mental strength and perseverance. I picked up the skill of barbering extremely quickly, being trusted to do $40 haircuts without supervision only two months after starting.\n\nIn early November of 2024 I graduated the Institute of Beauty and Wellness, top of my class in most categories. I took my state tests immediately and earned my official cosmetology license. I now continue my journey working towards growth and improving my skills.",
     bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/cristian-nellis/services",
   },
   {

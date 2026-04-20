@@ -39,9 +39,6 @@ export default function TeamMember({ member, flip, index }: Props) {
 
   const content = (
     <div className="flex-1 flex flex-col justify-center py-8 lg:py-0" data-reveal>
-      <p className={`font-subheading text-xs tracking-[0.3em] uppercase mb-2 ${isDark ? "text-white/30" : "text-black/30"}`}>
-        {String(index + 1).padStart(2, "0")}
-      </p>
       <h2 className={`font-heading text-5xl sm:text-6xl lg:text-7xl leading-none mb-1 ${isDark ? "text-white" : "text-black"}`}>
         {member.name}
       </h2>
