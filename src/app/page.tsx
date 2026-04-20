@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Haircuts, Fades & Grooming in Waukesha, WI | Forever Faded",
+  description:
+    "Book expert haircuts, fades, beard trims & grooming at Forever Faded — Waukesha County's premier barbershop. 350+ 5-star reviews. Two locations in Waukesha & Oconomowoc, WI.",
+  alternates: { canonical: "/" },
+};
+
 import Hero from "@/components/Hero";
 import Classics from "@/components/Classics";
 import Military from "@/components/Military";

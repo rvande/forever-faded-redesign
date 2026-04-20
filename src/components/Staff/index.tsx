@@ -82,7 +82,7 @@ function HiringCard() {
         </p>
       </div>
       <a
-        href="#careers"
+        href="/careers"
         className="shrink-0 font-subheading text-[11px] tracking-widest uppercase px-6 py-2.5 border border-gold text-gold hover:bg-gold hover:text-black transition-colors"
       >
         Apply

@@ -72,7 +72,7 @@ export default function Classics() {
               Book Now
             </Link>
             <Link
-              href="#services"
+              href="/services"
               className="inline-flex items-center border-2 border-black text-black font-subheading text-[13px] tracking-widest uppercase px-7 py-3 hover:bg-black hover:text-white transition-colors"
             >
               All Services

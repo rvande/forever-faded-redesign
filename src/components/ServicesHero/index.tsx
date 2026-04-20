@@ -10,7 +10,7 @@ export default function ServicesHero() {
         alt="Forever Faded barber at work"
         fill
         priority
-        className="object-cover object-center lg:object-bottom"
+        className="object-cover object-center lg:object-[center_40%]"
         sizes="100vw"
       />
 

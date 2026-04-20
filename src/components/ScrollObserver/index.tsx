@@ -1,9 +1,17 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function ScrollObserver() {
+  const pathname = usePathname();
+
   useEffect(() => {
+    // Reset any previously revealed elements so they animate in fresh
+    document.querySelectorAll("[data-reveal].revealed").forEach((el) => {
+      el.classList.remove("revealed");
+    });
+
     const els = document.querySelectorAll("[data-reveal]");
 
     const observer = new IntersectionObserver(
@@ -20,7 +28,7 @@ export default function ScrollObserver() {
 
     els.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return null;
 }

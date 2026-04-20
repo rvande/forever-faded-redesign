@@ -73,7 +73,7 @@ export default function Welcome() {
               Book Now
             </Link>
             <Link
-              href="/about"
+              href="/about-us"
               className="inline-flex items-center justify-center border-2 border-white text-white lg:border-black lg:text-black font-subheading text-[13px] tracking-widest uppercase px-8 py-3 hover:bg-white hover:text-black lg:hover:bg-black lg:hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white lg:focus-visible:outline-black"
             >
               About Us

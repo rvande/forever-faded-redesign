@@ -5,11 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Our Team", href: "#team" },
-  { label: "About", href: "#about" },
-  { label: "Podcast", href: "#podcast" },
+  { label: "Services", href: "/services" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Our Team", href: "/staff" },
+  { label: "About", href: "/about-us" },
+  { label: "Podcast", href: "/podcast" },
+  { label: "Careers", href: "/careers" },
 ];
 
 export default function Nav() {
@@ -57,7 +58,7 @@ export default function Nav() {
 
             {/* Phone */}
             <a
-              href="tel:+12625486188"
+              href="tel:+12623499289"
               className="flex items-center gap-1.5 text-black/70 hover:text-gold transition-colors"
             >
               <svg
@@ -68,7 +69,7 @@ export default function Nav() {
                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
               </svg>
               <span className="font-subheading text-[12px] tracking-wide">
-                (262) 548-6188
+                (262) 349-9289
               </span>
             </a>
           </div>
