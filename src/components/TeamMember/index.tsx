@@ -48,9 +48,11 @@ export default function TeamMember({ member, flip, index }: Props) {
         {member.role}
       </p>
       <div className="h-px bg-gold w-12 mb-6" />
-      <p className={`font-body text-sm leading-relaxed mb-8 ${isDark ? "text-white/80" : "text-black/80"}`}>
-        {member.bio}
-      </p>
+      <div className={`space-y-4 mb-8 font-body text-sm leading-relaxed ${isDark ? "text-white/80" : "text-black/80"}`}>
+        {member.bio.split("\n\n").map((para, i) => (
+          <p key={i}>{para}</p>
+        ))}
+      </div>
       <Link
         href="https://getsquire.com/booking/brands/forever-faded-llc"
         target="_blank"
