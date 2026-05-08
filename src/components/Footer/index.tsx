@@ -159,8 +159,8 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap gap-4 sm:gap-6 items-center">
             {[
-              { label: "Powered by Layer One", href: "#" },
-              { label: "Website by Vande-Digital", href: "#" },
+              { label: "Powered by Layer One", href: "https://layeroneconsultants.com" },
+              { label: "Website by Vande-Digital", href: "https://www.vande-digital.com/" },
               { label: "Privacy Policy", href: "/privacy" },
               { label: "Sitemap", href: "/sitemap.xml" },
             ].map(({ label, href }) => (
