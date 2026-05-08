@@ -44,6 +44,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
   },
   twitter: { card: "summary_large_image" },
+  verification: { google: "usNx3H5haVdrFjQ58S2oav_WIs4g4C32CUs_gHfvGhc" },
 };
 
 const HOURS_SPEC = [
