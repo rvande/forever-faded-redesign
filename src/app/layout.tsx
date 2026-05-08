@@ -4,7 +4,6 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ScrollObserver from "@/components/ScrollObserver";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import GoogleTag from "@/components/GoogleTag";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -124,13 +123,15 @@ export default function RootLayout({
       lang="en"
       className={`${bebasNeue.variable} ${barlow.variable} ${sourceSans3.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preload" as="image" href="/logo-light.png" fetchPriority="high" />
+      </head>
       <body className="min-h-full flex flex-col">
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
           />
           <GoogleAnalytics />
-          <GoogleTag />
           <ScrollObserver />
           <Nav />
           {children}

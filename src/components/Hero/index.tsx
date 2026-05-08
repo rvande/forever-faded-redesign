@@ -11,6 +11,7 @@ export default function Hero() {
         muted
         loop
         playsInline
+        preload="none"
         aria-hidden="true"
         className="hidden sm:block absolute inset-0 w-full h-full object-cover object-center"
       />
@@ -22,6 +23,7 @@ export default function Hero() {
         muted
         loop
         playsInline
+        preload="none"
         aria-hidden="true"
         className="sm:hidden absolute inset-0 w-full h-full object-cover object-center"
       />
