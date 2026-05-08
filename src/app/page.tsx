@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: { absolute: "Haircuts, Fades & Grooming in Waukesha, WI | Forever Faded Barber Shop" },
   description:
     "Book expert haircuts, fades, beard trims & grooming at Forever Faded — Waukesha County's premier barbershop. 350+ 5-star reviews. Two locations in Waukesha & Oconomowoc, WI.",
-  alternates: { canonical: "https://foreverfadedbarbershop.com" },
+  alternates: { canonical: SITE_URL },
 };
 
 import Hero from "@/components/Hero";

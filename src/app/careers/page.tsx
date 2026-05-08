@@ -1,11 +1,12 @@
 import CareersForm from "@/components/CareersForm";
 import JsonLd from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata = {
   title: "Barber Jobs & Careers in Waukesha, WI",
   description:
     "Join the Forever Faded team — we're looking for talented barbers and professionals in Waukesha and Oconomowoc, WI.",
-  alternates: { canonical: "https://foreverfadedbarbershop.com/careers" },
+  alternates: { canonical: `${SITE_URL}/careers` },
 };
 
 const jobPostingSchema = {
@@ -20,7 +21,7 @@ const jobPostingSchema = {
   hiringOrganization: {
     "@type": "Organization",
     name: "Forever Faded Barber Shop",
-    sameAs: "https://foreverfadedbarbershop.com",
+    sameAs: SITE_URL,
   },
   jobLocation: {
     "@type": "Place",
@@ -41,8 +42,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://foreverfadedbarbershop.com" },
-    { "@type": "ListItem", position: 2, name: "Careers", item: "https://foreverfadedbarbershop.com/careers" },
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Careers", item: `${SITE_URL}/careers` },
   ],
 };
 

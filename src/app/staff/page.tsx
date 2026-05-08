@@ -2,12 +2,13 @@ import TeamHero from "@/components/TeamHero";
 import TeamIntro from "@/components/TeamIntro";
 import TeamMember, { type TeamMemberData } from "@/components/TeamMember";
 import JsonLd from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata = {
   title: "Meet the Barbers at Forever Faded",
   description:
     "Meet the skilled barbers at Forever Faded — passionate professionals dedicated to precision cuts, fades, and grooming in Waukesha and Oconomowoc, WI.",
-  alternates: { canonical: "https://foreverfadedbarbershop.com/staff" },
+  alternates: { canonical: `${SITE_URL}/staff` },
 };
 
 const PLACEHOLDER = (name: string) =>
@@ -92,11 +93,11 @@ const staffSchema = {
       "@type": "Person",
       name: m.name,
       jobTitle: m.role,
-      url: `https://foreverfadedbarbershop.com/staff#${m.slug}`,
+      url: `${SITE_URL}/staff#${m.slug}`,
       worksFor: {
         "@type": "BarberShop",
         name: "Forever Faded Barber Shop",
-        url: "https://foreverfadedbarbershop.com",
+        url: SITE_URL,
       },
     },
   })),
@@ -106,8 +107,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://foreverfadedbarbershop.com" },
-    { "@type": "ListItem", position: 2, name: "Meet the Team", item: "https://foreverfadedbarbershop.com/staff" },
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Meet the Team", item: `${SITE_URL}/staff` },
   ],
 };
 

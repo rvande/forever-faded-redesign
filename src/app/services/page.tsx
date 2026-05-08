@@ -2,12 +2,13 @@ import ServicesHero from "@/components/ServicesHero";
 import ServiceCategory from "@/components/ServiceCategory";
 import ServicesSEO from "@/components/ServicesSEO";
 import JsonLd from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata = {
   title: "Haircuts, Fades & Barbershop Services in Waukesha, WI",
   description:
     "Browse all Forever Faded services — haircuts, fades, beard trims, braids, color, waxing and more. Two locations: Waukesha and Oconomowoc, WI.",
-  alternates: { canonical: "https://foreverfadedbarbershop.com/services" },
+  alternates: { canonical: `${SITE_URL}/services` },
 };
 
 const FACE_AND_BEARD = [
@@ -74,8 +75,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://foreverfadedbarbershop.com" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://foreverfadedbarbershop.com/services" },
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}/services` },
   ],
 };
 

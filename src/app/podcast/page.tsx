@@ -5,12 +5,13 @@ import PodcastBook from "@/components/PodcastBook";
 import PodcastGuestForm from "@/components/PodcastGuestForm";
 import PodcastConnectTim from "@/components/PodcastConnectTim";
 import JsonLd from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata = {
   title: "Barbering Podcasts — Success After Barber School & The Mental Shift",
   description:
     "Listen to Success After Barber School and The Mental Shift — two podcasts from the Forever Faded family covering the barbering industry, mindset, and building a legacy.",
-  alternates: { canonical: "https://foreverfadedbarbershop.com/podcast" },
+  alternates: { canonical: `${SITE_URL}/podcast` },
 };
 
 const podcastSchemas = [
@@ -23,7 +24,7 @@ const podcastSchemas = [
     url: "https://open.spotify.com/show/2jdaRC7NB6rqDebVpGn8JD",
     webFeed: "https://open.spotify.com/show/2jdaRC7NB6rqDebVpGn8JD",
     author: { "@type": "Person", name: "Tim Retic" },
-    publisher: { "@type": "Organization", name: "Forever Faded Barber Shop", url: "https://foreverfadedbarbershop.com" },
+    publisher: { "@type": "Organization", name: "Forever Faded Barber Shop", url: SITE_URL },
   },
   {
     "@context": "https://schema.org",
@@ -32,7 +33,7 @@ const podcastSchemas = [
     description:
       "Sharing inspirational stories from the streets to the board room. Change your mind. Change your day.",
     author: { "@type": "Person", name: "Tim Retic" },
-    publisher: { "@type": "Organization", name: "Forever Faded Barber Shop", url: "https://foreverfadedbarbershop.com" },
+    publisher: { "@type": "Organization", name: "Forever Faded Barber Shop", url: SITE_URL },
     sameAs: [
       "https://www.youtube.com/@ReticiGroup/videos",
       "https://www.facebook.com/InspiredtooInspire/",
@@ -45,8 +46,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://foreverfadedbarbershop.com" },
-    { "@type": "ListItem", position: 2, name: "Podcasts", item: "https://foreverfadedbarbershop.com/podcast" },
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Podcasts", item: `${SITE_URL}/podcast` },
   ],
 };
 
