@@ -15,14 +15,14 @@ type Member = {
 // Image assignments — Angel confirmed by filename, others mapped in URL-paste order.
 // Reorder publicId values here if any are mismatched once you visually verify.
 const STAFF: Member[] = [
-  { name: "Angel",    role: "Barber", publicId: "Angel_1996c92994_1_x37hwz",                        bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/angel-rafael/services" },
-  { name: "Juan",     role: "Barber", publicId: "IMG_20250422_130312_67e66a64fd_1_icbizv_pbq7vi",    bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/juan-lazcano/services" },
-  { name: "Chelsea",  role: "Barber", publicId: "thumbnail_image1_2d7a788be4_1_anpiza",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/chelsea-kuehl/services" },
-  { name: "Bryan",    role: "Barber", publicId: "DSC_09834_Enhanced_NR_d3de03f948_1_servz5",         bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/bryan-lembrino/services" },
-  { name: "Davy",     role: "Barber", publicId: "thumbnail_IMG_20250502_064651_217ca107b0_1_aw3awf", bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/davy-obrien-2/services" },
-  { name: "Cristian", role: "Barber", publicId: "Staff_6_2ee1235f98_1_ccjps2",                       bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/cristian-nellis/services" },
-  { name: "Megan",    role: "Barber", publicId: "IMG_3315_91e21665f4_1_sgilqi",                      bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/megan-ewing/services" },
-  { name: "Tim",      role: "Owner",  publicId: "DSC_09829_Enhanced_NR_52880fb2fe_1_j65c0d",         bookHref: "mailto:tim.retic@retici.com", isOwner: true },
+  { name: "Angel",    role: "Barber", publicId: "DSC_6478-2_h6cmqg",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/angel-rafael/services" },
+  { name: "Juan",     role: "Barber", publicId: "DSC_6493-2_tvpfvy",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/juan-lazcano/services" },
+  { name: "Chelsea",  role: "Barber", publicId: "DSC_6624-Enhanced-NR_qcgiey",   bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/chelsea-kuehl/services" },
+  { name: "Bryan",    role: "Barber", publicId: "DSC_6568_cpkpru",                bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/bryan-lembrino/services" },
+  { name: "Davy",     role: "Barber", publicId: "DSC_6583-2_vtcdtx",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/davy-obrien-2/services" },
+  { name: "Cristian", role: "Barber", publicId: "DSC_6628_1_nqbfor",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/cristian-nellis/services" },
+  { name: "Megan",    role: "Barber", publicId: "DSC_6553-2_fw0m56",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/megan-ewing/services" },
+  { name: "Tim",      role: "Owner",  publicId: "DSC_6531-Enhanced-NR_axy0ok", bookHref: "mailto:tim.retic@retici.com", isOwner: true },
 ];
 
 function StaffCard({ member }: { member: Member }) {

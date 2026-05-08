@@ -1,9 +1,49 @@
 import CareersForm from "@/components/CareersForm";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
-  title: "Careers | Forever Faded Barber Shop",
+  title: "Barber Jobs & Careers in Waukesha, WI",
   description:
     "Join the Forever Faded team — we're looking for talented barbers and professionals in Waukesha and Oconomowoc, WI.",
+  alternates: { canonical: "https://foreverfadedbarbershop.com/careers" },
+};
+
+const jobPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  title: "Licensed Barber",
+  description:
+    "Forever Faded Barber Shop is hiring licensed barbers for our Waukesha and Oconomowoc, WI locations. Join a team with 50+ years of combined experience, a loyal client base, and a welcoming shop culture.",
+  datePosted: "2025-01-01",
+  validThrough: "2025-12-31",
+  employmentType: "FULL_TIME",
+  hiringOrganization: {
+    "@type": "Organization",
+    name: "Forever Faded Barber Shop",
+    sameAs: "https://foreverfadedbarbershop.com",
+  },
+  jobLocation: {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "1427 E Racine Ave #H",
+      addressLocality: "Waukesha",
+      addressRegion: "WI",
+      postalCode: "53186",
+      addressCountry: "US",
+    },
+  },
+  qualifications: "Valid Wisconsin barber or cosmetology license",
+  skills: "Haircuts, fades, beard trims, grooming",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://foreverfadedbarbershop.com" },
+    { "@type": "ListItem", position: 2, name: "Careers", item: "https://foreverfadedbarbershop.com/careers" },
+  ],
 };
 
 export default function CareersPage() {
@@ -25,6 +65,8 @@ export default function CareersPage() {
       <div className="h-px bg-gold" />
 
       <CareersForm />
+      <JsonLd data={jobPostingSchema} />
+      <JsonLd data={breadcrumbSchema} />
     </main>
   );
 }

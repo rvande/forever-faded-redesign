@@ -1,11 +1,13 @@
 import ServicesHero from "@/components/ServicesHero";
 import ServiceCategory from "@/components/ServiceCategory";
 import ServicesSEO from "@/components/ServicesSEO";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
-  title: "Services | Forever Faded Barber Shop",
+  title: "Haircuts, Fades & Barbershop Services in Waukesha, WI",
   description:
     "Browse all Forever Faded services — haircuts, fades, beard trims, braids, color, waxing and more. Two locations: Waukesha and Oconomowoc, WI.",
+  alternates: { canonical: "https://foreverfadedbarbershop.com/services" },
 };
 
 const FACE_AND_BEARD = [
@@ -44,6 +46,39 @@ const SPECIALTY = [
   { name: "3 Hour Braids",              price: "$200", duration: "3 Hours" },
 ];
 
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Forever Faded Barbershop Services",
+  "description": "Full service menu for Forever Faded Barber Shop in Waukesha and Oconomowoc, WI",
+  "itemListElement": [
+    ...FACE_AND_BEARD.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: { "@type": "Service", name: s.name, offers: { "@type": "Offer", price: s.price.replace("$", ""), priceCurrency: "USD" } },
+    })),
+    ...HAIR.map((s, i) => ({
+      "@type": "ListItem",
+      position: FACE_AND_BEARD.length + i + 1,
+      item: { "@type": "Service", name: s.name, offers: { "@type": "Offer", price: s.price.replace("$", ""), priceCurrency: "USD" } },
+    })),
+    ...SPECIALTY.map((s, i) => ({
+      "@type": "ListItem",
+      position: FACE_AND_BEARD.length + HAIR.length + i + 1,
+      item: { "@type": "Service", name: s.name, offers: { "@type": "Offer", price: s.price.replace("$", ""), priceCurrency: "USD" } },
+    })),
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://foreverfadedbarbershop.com" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://foreverfadedbarbershop.com/services" },
+  ],
+};
+
 export default function ServicesPage() {
   return (
     <main>
@@ -75,6 +110,8 @@ export default function ServicesPage() {
 
       <div className="h-px bg-gold" />
       <ServicesSEO />
+      <JsonLd data={servicesSchema} />
+      <JsonLd data={breadcrumbSchema} />
     </main>
   );
 }

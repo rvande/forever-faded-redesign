@@ -45,40 +45,74 @@ export const metadata: Metadata = {
     url: SITE_URL,
   },
   twitter: { card: "summary_large_image" },
-  alternates: { canonical: SITE_URL },
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "HairSalon",
-  name: "Forever Faded Barber Shop",
-  description:
-    "Waukesha County's premier barbershop offering expert haircuts, fades, beard trims, color, and grooming services.",
-  url: SITE_URL,
-  telephone: "+12623499289",
-  foundingDate: "2008",
-  founder: { "@type": "Person", name: "Tim Retic" },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "1427 E Racine Ave #H",
-    addressLocality: "Waukesha",
-    addressRegion: "WI",
-    postalCode: "53186",
-    addressCountry: "US",
+const HOURS_SPEC = [
+  { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], opens: "10:00", closes: "18:00" },
+  { "@type": "OpeningHoursSpecification", dayOfWeek: ["Sunday"], opens: "00:00", closes: "00:00" },
+];
+
+const localBusinessSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "@id": `${SITE_URL}/#barbershop-waukesha`,
+    name: "Forever Faded Barber Shop — Waukesha",
+    description:
+      "Waukesha County's premier barbershop offering expert haircuts, fades, beard trims, color, and grooming services.",
+    url: SITE_URL,
+    telephone: "+12623499289",
+    priceRange: "$$",
+    image: `${SITE_URL}/dark-logo.png`,
+    foundingDate: "2008",
+    founder: { "@type": "Person", name: "Tim Retic" },
+    hasMap: "https://www.google.com/maps?cid=5172250936097981129",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "1427 E Racine Ave #H",
+      addressLocality: "Waukesha",
+      addressRegion: "WI",
+      postalCode: "53186",
+      addressCountry: "US",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 43.0117,
+      longitude: -88.2315,
+    },
+    openingHoursSpecification: HOURS_SPEC,
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "5", reviewCount: "350" },
+    sameAs: [
+      "https://www.facebook.com/foreverFadedwi",
+      "https://www.instagram.com/foreverfadedwi/",
+      "https://www.tiktok.com/@foreverfadedwi",
+      "https://www.linkedin.com/in/tretic/",
+      "https://www.youtube.com/user/tretic13",
+    ],
   },
-  openingHoursSpecification: [
-    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], opens: "10:00", closes: "18:00" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Sunday"], opens: "00:00", closes: "00:00" },
-  ],
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "5", reviewCount: "350" },
-  sameAs: [
-    "https://www.facebook.com/foreverFadedwi",
-    "https://www.instagram.com/foreverfadedwi/",
-    "https://www.tiktok.com/@foreverfadedwi",
-    "https://www.linkedin.com/in/tretic/",
-    "https://www.youtube.com/user/tretic13",
-  ],
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "@id": `${SITE_URL}/#barbershop-oconomowoc`,
+    name: "Forever Faded Barber Shop — Oconomowoc",
+    description: "Forever Faded's second location coming soon to Oconomowoc, WI — expert haircuts, fades, and grooming.",
+    url: SITE_URL,
+    telephone: "+12623499289",
+    priceRange: "$$",
+    image: `${SITE_URL}/dark-logo.png`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Oconomowoc",
+      addressRegion: "WI",
+      addressCountry: "US",
+    },
+    openingHoursSpecification: HOURS_SPEC,
+    sameAs: [
+      "https://www.facebook.com/foreverFadedwi",
+      "https://www.instagram.com/foreverfadedwi/",
+    ],
+  },
+];
 
 export default function RootLayout({
   children,

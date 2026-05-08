@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Haircuts, Fades & Grooming in Waukesha, WI | Forever Faded",
+  title: { absolute: "Haircuts, Fades & Grooming in Waukesha, WI | Forever Faded Barber Shop" },
   description:
     "Book expert haircuts, fades, beard trims & grooming at Forever Faded — Waukesha County's premier barbershop. 350+ 5-star reviews. Two locations in Waukesha & Oconomowoc, WI.",
-  alternates: { canonical: "/" },
+  alternates: { canonical: "https://foreverfadedbarbershop.com" },
 };
 
 import Hero from "@/components/Hero";
+import NewLocation from "@/components/NewLocation";
 import Classics from "@/components/Classics";
 import Military from "@/components/Military";
 import WhyUs from "@/components/WhyUs";
@@ -21,6 +22,7 @@ export default function Home() {
   return (
     <main className="flex-1">
       <Hero />
+      <NewLocation />
       <div className="h-px bg-gold" aria-hidden="true" />
       <Classics />
       <Military />

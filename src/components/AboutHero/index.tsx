@@ -3,18 +3,18 @@ import Link from "next/link";
 
 export default function AboutHero() {
   return (
-    <section className="relative w-full min-h-[480px] sm:min-h-[560px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full min-h-[600px] sm:min-h-[720px] lg:min-h-[860px] flex items-center justify-center overflow-hidden">
       <Image
-        src="https://res.cloudinary.com/dmlijbube/image/upload/v1776708794/history_hq2rb2.webp"
+        src="https://res.cloudinary.com/dmlijbube/image/upload/v1778275430/DSC_6460-Enhanced-NR_1_1_fphzjs.jpg"
         alt="Forever Faded Barbershop interior"
         fill
         priority
         className="object-cover object-center"
         sizes="100vw"
       />
-      <div aria-hidden="true" className="absolute inset-0 bg-black/65" />
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-      <div className="relative z-10 text-center px-6" data-reveal>
+      <div className="absolute bottom-0 left-0 right-0 z-10 text-center px-6 pb-10 sm:pb-14" data-reveal>
         <h1 className="font-heading leading-none mb-4">
           <span className="block text-6xl sm:text-7xl lg:text-9xl text-white">
             About
