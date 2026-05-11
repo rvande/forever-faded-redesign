@@ -24,7 +24,7 @@ export default function Nav() {
           <div className="flex items-center justify-between h-9 gap-4">
             {/* Location */}
             <a
-              href="#locations"
+              href="/#locations"
               className="flex items-center gap-1.5 text-black/70 hover:text-gold transition-colors"
             >
               <svg

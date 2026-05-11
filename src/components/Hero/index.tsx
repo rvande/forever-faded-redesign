@@ -18,7 +18,7 @@ export default function Hero() {
 
       {/* ── Full-bleed video — mobile ── */}
       <video
-        src="https://res.cloudinary.com/dmlijbube/video/upload/q_auto,f_auto/mobile-hero_mp9pjk"
+        src="https://res.cloudinary.com/dmlijbube/video/upload/q_auto,f_auto,w_800/mobile-hero_mp9pjk"
         autoPlay
         muted
         loop

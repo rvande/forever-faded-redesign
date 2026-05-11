@@ -108,6 +108,7 @@ function LocationCard({ loc }: { loc: Location }) {
 export default function Locations() {
   return (
     <section
+      id="locations"
       className="bg-black py-16 sm:py-20 px-6 sm:px-12 lg:px-20"
       aria-labelledby="locations-heading"
     >

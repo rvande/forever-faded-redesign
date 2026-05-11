@@ -22,6 +22,7 @@ const STAFF: Member[] = [
   { name: "Davy",     role: "Barber", publicId: "DSC_6583-2_vtcdtx",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/davy-obrien-2/services" },
   { name: "Cristian", role: "Barber", publicId: "DSC_6628_1_nqbfor",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/cristian-nellis/services" },
   { name: "Megan",    role: "Barber", publicId: "DSC_6553-2_fw0m56",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/megan-ewing/services" },
+  { name: "Alexis",   role: "Barber", publicId: "DSC_6607-Enhanced-NR_xvnh4c",        bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/alexis-adams-2/services" },
   { name: "Tim",      role: "Owner",  publicId: "copy_of_dsc_6505-2_1_mtnk0z_c68843", bookHref: "mailto:tim.retic@retici.com", isOwner: true },
 ];
 

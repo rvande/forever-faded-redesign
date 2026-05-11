@@ -44,7 +44,7 @@ const TEAM: TeamMemberData[] = [
     slug: "bryan",
     role: "Barber",
     publicId: "DSC_6568_cpkpru",
-    bio: PLACEHOLDER("Bryan"),
+    bio: "Reasons why I started cutting hair: It originally began as just a hobby and a way to distract myself. However, I soon began practicing on one of my brother's weekly; he saw the benefit of free haircuts, and I saw a great opportunity to refine my skills. Word traveled quickly, and I have since been slowly building my clientele. I quickly learned that it wasn't just a hobby at that point — I loved what it was and quickly began to look for more clients. Having that connection with different people everyday and hearing stories I didn't think I would hear is something I can consider a blessing. From being a nobody to having people's trust is a big thing I can say I'm proud of. I don't think I would view things the same without all the stories and input from everyone who sat in my chair.\n\n Reason why I joined the Forever Faded Family: I tried at one or two other spots prior to Forever Faded and they declined me and quickly told me to look elsewhere. The second I walked into Forever Faded it felt welcoming, and the first thing I saw was smiles and a comforting atmosphere. That told me everything I needed to know.",
     bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/bryan-lembrino/services",
   },
   {
@@ -70,6 +70,14 @@ const TEAM: TeamMemberData[] = [
     publicId: "DSC_6553-2_fw0m56",
     bio: "Hi, my name is Megan! I am a proud barber at Forever Faded — where if you can grow it, we can cut it. When I'm not at work I love spending time with my three dogs, being outside enjoying the nice weather, or curling up inside for really long naps.\n\nI have been in the industry for five, almost six years now and couldn't see myself doing anything else. I've been with Forever Faded my entire career, fresh out of school, where I originally started with intentions of becoming a makeup artist. Inevitably I fell in love with barbering and was brought under the wing of the experienced barbers at Forever Faded and learned everything I know.\n\nMy ultimate goal is becoming a shop owner as well as opening suite rentals for anyone in the beauty industry to do what they love.",
     bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/megan-ewing/services",
+  },
+  {
+    name: "Alexis",
+    slug: "alexis",
+    role: "Barber",
+    publicId: "DSC_6607-Enhanced-NR_xvnh4c",
+    bio: PLACEHOLDER("Alexis"),
+    bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/alexis-adams-2/services",
   },
   {
     name: "Tim",
