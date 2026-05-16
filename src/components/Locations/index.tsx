@@ -14,7 +14,6 @@ type Location = {
   mapsHref: string;
   bookHref: string;
   embedSrc?: string;
-  comingSoon?: boolean;
 };
 
 const LOCATIONS: Location[] = [
@@ -27,10 +26,10 @@ const LOCATIONS: Location[] = [
   },
   {
     city: "Oconomowoc",
-    address: ["Address Coming Soon,", "Oconomowoc, WI"],
-    mapsHref: "#",
-    bookHref: "https://getsquire.com/booking/brands/forever-faded-llc",
-    comingSoon: true,
+    address: ["888 Thackeray Trail,", "Oconomowoc, WI 53066"],
+    mapsHref: "https://www.google.com/maps/search/?api=1&query=888+Thackeray+Trail,+Oconomowoc,+WI+53066",
+    bookHref: "https://getsquire.com/booking/book/forever-faded-oconomowoc-oconomowoc",
+    embedSrc: "https://maps.google.com/maps?q=888+Thackeray+Trail,+Oconomowoc,+WI+53066&output=embed",
   },
 ];
 
@@ -44,20 +43,13 @@ function LocationCard({ loc }: { loc: Location }) {
 
       {/* Map */}
       <div className="relative w-full aspect-[4/3] overflow-hidden mb-6 ring-2 ring-gold">
-        {loc.comingSoon ? (
-          <div className="absolute inset-0 bg-white/5 border border-white/10 flex flex-col items-center justify-center gap-3">
-            <p className="font-heading text-4xl text-gold/40">Coming Soon</p>
-            <p className="font-body text-xs text-white/30 uppercase tracking-widest">Location TBA</p>
-          </div>
-        ) : (
-          <iframe
-            src={loc.embedSrc}
-            title={`Map of Forever Faded ${loc.city}`}
-            className="absolute inset-0 w-full h-full border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        )}
+        <iframe
+          src={loc.embedSrc}
+          title={`Map of Forever Faded ${loc.city}`}
+          className="absolute inset-0 w-full h-full border-0"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
       </div>
 
       {/* Hours + address */}
@@ -85,20 +77,14 @@ function LocationCard({ loc }: { loc: Location }) {
             ))}
           </address>
 
-          {!loc.comingSoon ? (
-            <a
-              href={loc.bookHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-block font-subheading text-base tracking-widest uppercase px-6 py-3 bg-gold text-black hover:bg-gold/90 shadow-[3px_3px_0px_0px_rgba(255,255,255,0.15)] transition-colors"
-            >
-              Book Here
-            </a>
-          ) : (
-            <p className="mt-5 font-body text-xs text-white/30 uppercase tracking-widest">
-              Booking opening soon
-            </p>
-          )}
+          <a
+            href={loc.bookHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-block font-subheading text-base tracking-widest uppercase px-6 py-3 bg-gold text-black hover:bg-gold/90 shadow-[3px_3px_0px_0px_rgba(255,255,255,0.15)] transition-colors"
+          >
+            Book Here
+          </a>
         </div>
       </div>
     </div>

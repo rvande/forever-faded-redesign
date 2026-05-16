@@ -3,7 +3,7 @@ import Link from "next/link";
 const FEATURES = [
   "Expert cuts, fades & beard trims",
   "As featured in the Waukesha Freeman",
-  "Follow our Facebook page for the opening date",
+  "Opening May 25, 2026 — book your first appointment now",
 ];
 
 function MapPinIcon() {
@@ -63,7 +63,7 @@ export default function NewLocation() {
           <div className="flex flex-col gap-6" data-reveal data-delay="1">
             <div className="inline-flex items-center gap-2 self-start bg-white/5 border border-gold/30 px-4 py-2">
               <MapPinIcon />
-              <span className="font-subheading text-gold text-sm tracking-wide">Oconomowoc, WI</span>
+              <span className="font-subheading text-gold text-sm tracking-wide">888 Thackeray Trail, Oconomowoc, WI 53066</span>
             </div>
 
             <div className="border-l-2 border-gold/60 pl-5 space-y-2">
@@ -84,15 +84,26 @@ export default function NewLocation() {
               ))}
             </ul>
 
-            <Link
-              href="https://www.facebook.com/foreverFadedwi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="self-start inline-flex items-center gap-2 px-6 py-3 bg-gold text-black font-subheading text-sm tracking-widest uppercase shadow-[3px_3px_0px_0px_rgba(255,255,255,0.15)] hover:bg-gold/90 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
-            >
-              Follow Us on Facebook
-              <ArrowUpRightIcon />
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="https://getsquire.com/booking/book/forever-faded-oconomowoc-oconomowoc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-start inline-flex items-center gap-2 px-6 py-3 bg-gold text-black font-subheading text-sm tracking-widest uppercase shadow-[3px_3px_0px_0px_rgba(255,255,255,0.15)] hover:bg-gold/90 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              >
+                Book Oconomowoc
+                <ArrowUpRightIcon />
+              </Link>
+              <Link
+                href="https://www.facebook.com/foreverFadedwi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-start inline-flex items-center gap-2 px-6 py-3 border border-gold/50 text-gold font-subheading text-sm tracking-widest uppercase hover:border-gold hover:text-gold/80 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              >
+                Follow on Facebook
+                <ArrowUpRightIcon />
+              </Link>
+            </div>
           </div>
 
           {/* Right: press card */}
