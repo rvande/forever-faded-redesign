@@ -55,7 +55,7 @@ const HOURS_SPEC = [
 const localBusinessSchema = [
   {
     "@context": "https://schema.org",
-    "@type": "BarberShop",
+    "@type": ["BarberShop", "LocalBusiness"],
     "@id": `${SITE_URL}/#barbershop-waukesha`,
     name: "Forever Faded Barber Shop — Waukesha",
     description:
@@ -92,18 +92,20 @@ const localBusinessSchema = [
   },
   {
     "@context": "https://schema.org",
-    "@type": "BarberShop",
+    "@type": ["BarberShop", "LocalBusiness"],
     "@id": `${SITE_URL}/#barbershop-oconomowoc`,
     name: "Forever Faded Barber Shop — Oconomowoc",
-    description: "Forever Faded's second location coming soon to Oconomowoc, WI — expert haircuts, fades, and grooming.",
+    description: "Forever Faded's Oconomowoc location — expert haircuts, fades, beard trims, and grooming opening May 25, 2026.",
     url: SITE_URL,
     telephone: "+12623499289",
     priceRange: "$$",
     image: `${SITE_URL}/dark-logo.png`,
     address: {
       "@type": "PostalAddress",
+      streetAddress: "888 Thackeray Trail",
       addressLocality: "Oconomowoc",
       addressRegion: "WI",
+      postalCode: "53066",
       addressCountry: "US",
     },
     openingHoursSpecification: HOURS_SPEC,
