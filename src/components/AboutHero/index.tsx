@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { cf } from "@/lib/aws";
 
 export default function AboutHero() {
   return (
     <section className="relative w-full min-h-[600px] sm:min-h-[720px] lg:min-h-[860px] flex items-center justify-center overflow-hidden">
       <Image
-        src="https://res.cloudinary.com/dmlijbube/image/upload/v1778275430/DSC_6460-Enhanced-NR_1_1_fphzjs.jpg"
+        src={cf("general/DSC_6460-Enhanced-NR_1_1_fphzjs.jpg")}
         alt="Forever Faded Barbershop interior"
         fill
         priority

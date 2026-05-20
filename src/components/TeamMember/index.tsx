@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { cf } from "@/lib/aws";
 
-const CLD = (id: string) =>
-  `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/q_auto,f_auto,w_800/${id}`;
+const CLD = (id: string) => cf(`staff/${id}.jpg`);
 
 export type TeamMemberData = {
   name: string;

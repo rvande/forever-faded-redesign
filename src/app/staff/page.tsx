@@ -83,7 +83,7 @@ const TEAM: TeamMemberData[] = [
     name: "Tim",
     slug: "tim",
     role: "Owner",
-    publicId: "copy_of_dsc_6505-2_1_mtnk0z_c68843",
+    publicId: "Copy of DSC_6505-2_1_mtnk0z",
     bio: "Timothy L Retic SR is the visionary owner behind Forever Faded Barbershop. While Tim's expertise as a Master Barber is unquestionable, he no longer cuts hair at Forever Faded. Instead, he focuses on the strategic direction of the business and mentoring his talented team of barbers who deliver exceptional service daily.\n\n While you won't find him behind the chair at Forever Faded, his influence and standards of excellence permeate every aspect of the barbershop experience.",
     bookHref: "mailto:tim.retic@retici.com",
     ctaLabel: "Contact Tim",

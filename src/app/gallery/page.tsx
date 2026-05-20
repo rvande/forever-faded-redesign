@@ -1,6 +1,6 @@
 import GalleryHero from "@/components/GalleryHero";
 import GalleryGrid from "@/components/GalleryGrid";
-import { getGalleryImages } from "@/lib/cloudinary";
+import { GALLERY_IMAGES } from "@/lib/gallery";
 import JsonLd from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
 
@@ -20,8 +20,17 @@ const breadcrumbSchema = {
   ],
 };
 
-export default async function GalleryPage() {
-  const images = await getGalleryImages();
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+export default function GalleryPage() {
+  const images = shuffle(GALLERY_IMAGES);
 
   return (
     <main>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { cf } from "@/lib/aws";
 
 export default function Hero() {
   return (
@@ -6,7 +7,7 @@ export default function Hero() {
 
       {/* ── Full-bleed video — desktop ── */}
       <video
-        src="https://res.cloudinary.com/dmlijbube/video/upload/q_auto,f_auto/herovideo_bnt6ye"
+        src={cf("videos/herovideo_desktop.mp4")}
         autoPlay
         muted
         loop
@@ -18,7 +19,7 @@ export default function Hero() {
 
       {/* ── Full-bleed video — mobile ── */}
       <video
-        src="https://res.cloudinary.com/dmlijbube/video/upload/q_auto,f_auto,w_800/mobile-hero_mp9pjk"
+        src={cf("videos/mobile-hero_mp9pjk.mp4")}
         autoPlay
         muted
         loop

@@ -4,12 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-// ── Cloudinary config ──────────────────────────────────────────────────────
-const CLOUD = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME ?? "YOUR_CLOUD_NAME";
+import { cf } from "@/lib/aws";
 
-/** Build an optimised Cloudinary URL from a root-level public ID */
-function cld(publicId: string, w = 600) {
-  return `https://res.cloudinary.com/${CLOUD}/image/upload/q_auto,f_auto,w_${w}/${publicId}`;
+/** Build a CloudFront URL for a gallery image */
+function cld(publicId: string) {
+  if (publicId === "caiden_front_ivhsq6") return cf(`gallery/${publicId}.png`);
+  return cf(`gallery/${publicId}.jpg`);
 }
 
 // ── Image pools per grid slot ─────────────────────────────────────────────

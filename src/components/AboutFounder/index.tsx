@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cf } from "@/lib/aws";
 
 export default function AboutFounder() {
   return (
@@ -10,7 +11,7 @@ export default function AboutFounder() {
           <div className="w-full lg:w-[38%] shrink-0" data-reveal>
             <div className="relative w-full aspect-[3/4] overflow-hidden">
               <Image
-                src="https://res.cloudinary.com/dmlijbube/image/upload/q_auto,f_auto/v1776708653/theowner-profile_huzaza.webp"
+                src={cf("general/theowner-profile_huzaza.webp")}
                 alt="Tim Retic — Founder of Forever Faded Barbershop"
                 fill
                 className="object-cover object-top"

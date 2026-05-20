@@ -2,14 +2,15 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import type { CloudinaryImage } from "@/lib/cloudinary";
+import type { GalleryImage } from "@/lib/gallery";
+import { cf } from "@/lib/aws";
 
 type Props = {
-  images: CloudinaryImage[];
+  images: GalleryImage[];
 };
 
 export default function GalleryGrid({ images }: Props) {
-  const [active, setActive] = useState<CloudinaryImage | null>(null);
+  const [active, setActive] = useState<GalleryImage | null>(null);
 
   const close = useCallback(() => setActive(null), []);
 
@@ -40,19 +41,18 @@ export default function GalleryGrid({ images }: Props) {
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12 lg:py-16">
           <div className="columns-2 sm:columns-3 lg:columns-4 gap-3 lg:gap-4 space-y-3 lg:space-y-4">
             {images.map((img) => {
-              const src = img.secure_url.replace("/upload/", "/upload/q_auto,f_auto,w_800/");
-              const aspectRatio = img.width && img.height ? img.width / img.height : 1;
+              const aspectRatio = img.width / img.height;
 
               return (
                 <button
-                  key={img.public_id}
+                  key={img.key}
                   onClick={() => setActive(img)}
                   className="relative overflow-hidden break-inside-avoid group w-full cursor-zoom-in"
                   style={{ aspectRatio }}
                   aria-label="View image fullscreen"
                 >
                   <Image
-                    src={src}
+                    src={cf(img.key)}
                     alt="Forever Faded Barbershop"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -75,7 +75,6 @@ export default function GalleryGrid({ images }: Props) {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/95"
           onClick={close}
         >
-          {/* Close button */}
           <button
             onClick={close}
             aria-label="Close"
@@ -86,13 +85,12 @@ export default function GalleryGrid({ images }: Props) {
             </svg>
           </button>
 
-          {/* Image */}
           <div
             className="relative w-full h-full max-w-5xl max-h-[90vh] mx-4"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={active.secure_url.replace("/upload/", "/upload/q_auto,f_auto,w_1600/")}
+              src={cf(active.key)}
               alt="Forever Faded Barbershop"
               fill
               className="object-contain"

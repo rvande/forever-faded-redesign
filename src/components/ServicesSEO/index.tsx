@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { cf } from "@/lib/aws";
 
 export default function ServicesSEO() {
   return (
@@ -72,7 +73,7 @@ export default function ServicesSEO() {
           {/* Image column */}
           <div className="w-full lg:w-[45%] shrink-0 self-start ring-1 ring-gold/30" data-reveal data-delay="1">
             <Image
-              src="https://res.cloudinary.com/dmlijbube/image/upload/v1778275430/DSC_6460-Enhanced-NR_1_1_fphzjs.jpg"
+              src={cf("general/DSC_6460-Enhanced-NR_1_1_fphzjs.jpg")}
               alt="Forever Faded barber at work"
               width={800}
               height={1200}

@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# aws
+*.ff-deploy_accessKeys.csv
+scripts/gallery-download/
+scripts/gallery-v2/
+scripts/explore-download/
+scripts/staff-download/
+scripts/heroes-download/
+scripts/heic-converted/

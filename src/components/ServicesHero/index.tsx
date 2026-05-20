@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { cf } from "@/lib/aws";
 
 export default function ServicesHero() {
   return (
     <section className="relative w-full min-h-[480px] sm:min-h-[540px] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="https://res.cloudinary.com/dmlijbube/image/upload/v1776190321/BTS_FOOTAGE__wqzwzg.jpg"
+        src={cf("general/BTS_FOOTAGE__wqzwzg.jpg")}
         alt="Forever Faded barber at work"
         fill
         priority

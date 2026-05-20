@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { cf } from "@/lib/aws";
 
-const CLD = (id: string) =>
-  `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/q_auto,f_auto,w_600/${id}`;
+const CLD = (id: string) => cf(`staff/${id}.jpg`);
 
 type Member = {
   name: string;
@@ -23,7 +23,7 @@ const STAFF: Member[] = [
   { name: "Cristian", role: "Barber", publicId: "DSC_6628_1_nqbfor",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/cristian-nellis/services" },
   { name: "Megan",    role: "Barber", publicId: "DSC_6553-2_fw0m56",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/megan-ewing/services" },
   { name: "Alexis",   role: "Barber", publicId: "DSC_6607-Enhanced-NR_xvnh4c",        bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/alexis-adams-2/services" },
-  { name: "Tim",      role: "Owner",  publicId: "copy_of_dsc_6505-2_1_mtnk0z_c68843", bookHref: "mailto:tim.retic@retici.com", isOwner: true },
+  { name: "Tim",      role: "Owner",  publicId: "Copy of DSC_6505-2_1_mtnk0z", bookHref: "mailto:tim.retic@retici.com", isOwner: true },
 ];
 
 function StaffCard({ member }: { member: Member }) {
