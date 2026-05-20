@@ -5,13 +5,13 @@ const SERVICES = [
   {
     number: "01",
     name: "Adult Cut",
-    description: "Precision tapering using multiple guard lengths for a seamless transition.",
+    description: "Professional haircut, styled to preference.",
     price: "$40+",
   },
   {
     number: "02",
     name: "Teen/Child Cut",
-    description: "Fads with clean line up, styled to preference.",
+    description: "Fades with clean line up, styled to preference.",
     price: "$30+",
   },
   {

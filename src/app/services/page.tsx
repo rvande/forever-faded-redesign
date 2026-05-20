@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 const FACE_AND_BEARD = [
-  { name: "Beard & Head Lining",                   price: "$45", duration: "30 Minutes" },
+  { name: "Beard & Head Lining",                   price: "$30", duration: "30 Minutes" },
   { name: "Full Service Beard Trim",                price: "$20", duration: "20 Minutes" },
   { name: "Adult Cut and Beard Trim",               price: "$45", duration: "45 Minutes" },
   { name: "Taper, Lining, Beard Trim",              price: "$30", duration: "30 Minutes" },
