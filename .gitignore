@@ -41,7 +41,8 @@ yarn-error.log*
 next-env.d.ts
 
 # aws
-*.ff-deploy_accessKeys.csv
+*accessKeys*.csv
+ff-deploy_accessKeys.csv
 scripts/gallery-download/
 scripts/gallery-v2/
 scripts/explore-download/
