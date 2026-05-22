@@ -63,7 +63,7 @@ export default function NewLocation() {
           <div className="flex flex-col gap-6" data-reveal data-delay="1">
             <div className="inline-flex items-center gap-2 self-start bg-white/5 border border-gold/30 px-4 py-2">
               <MapPinIcon />
-              <span className="font-subheading text-gold text-sm tracking-wide">888 Thackeray Trail, Oconomowoc, WI 53066</span>
+              <span className="font-subheading text-gold text-sm tracking-wide">888 Thackeray Trail, Suite 110, Oconomowoc, WI 53066</span>
             </div>
 
             <div className="border-l-2 border-gold/60 pl-5 space-y-2">
@@ -106,17 +106,40 @@ export default function NewLocation() {
             </div>
           </div>
 
-          {/* Right: press card */}
-          <div className="flex justify-center lg:justify-end" data-reveal data-delay="2">
+          {/* Right: location photo, directions, and press card */}
+          <div className="flex flex-col gap-6" data-reveal data-delay="2">
+            {/* Photo and Directions */}
+            <div className="w-full space-y-4">
+              <div className="w-full border border-gold/30 bg-white/5 overflow-hidden">
+                <div className="relative w-full h-56 sm:h-64 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/homepage/oconlocation.jpg"
+                    alt="Oconomowoc location exterior"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Directions */}
+              <div className="border-l-2 border-gold/60 pl-5 space-y-3">
+                <p className="font-subheading text-white text-sm leading-snug">Directions to Our Oconomowoc Shop:</p>
+                <p className="font-body text-white/70 text-sm leading-relaxed">
+                  To get to our shop, enter the parking lot off the side road from Thackeray Trail. Our shop (Suite 110) is located behind the building in the back corner — door closest to the fence. Once you enter, we are the first door on your left on the first level.
+                </p>
+              </div>
+            </div>
+
+            {/* Facebook Press Card */}
             <Link
               href="https://www.facebook.com/100063636517194/posts/1633402388790963/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-full max-w-sm lg:max-w-none border border-gold/30 bg-white/5 overflow-hidden hover:border-gold/60 transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+              className="group border border-gold/30 bg-white/5 overflow-hidden hover:border-gold/60 transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
               aria-label="View the Forever Faded expansion announcement on Facebook"
             >
               {/* Photo */}
-              <div className="relative w-full h-56 sm:h-64 lg:h-72 overflow-hidden">
+              <div className="relative w-full h-48 sm:h-56 overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://bloximages.newyork1.vip.townnews.com/gmtoday.com/content/tncms/assets/v3/editorial/f/fd/ffdbff66-0048-4c17-940c-ab419a4fc4ff/69f1ee434068e.image.jpg"

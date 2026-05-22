@@ -26,10 +26,10 @@ const LOCATIONS: Location[] = [
   },
   {
     city: "Oconomowoc",
-    address: ["888 Thackeray Trail,", "Oconomowoc, WI 53066"],
-    mapsHref: "https://www.google.com/maps/search/?api=1&query=888+Thackeray+Trail,+Oconomowoc,+WI+53066",
+    address: ["888 Thackeray Trail, Suite #110,", "Oconomowoc, WI 53066"],
+    mapsHref: "https://www.google.com/maps/search/?api=1&query=888+Thackeray+Trail+Suite+110,+Oconomowoc,+WI+53066",
     bookHref: "https://getsquire.com/booking/book/forever-faded-oconomowoc-oconomowoc",
-    embedSrc: "https://maps.google.com/maps?q=888+Thackeray+Trail,+Oconomowoc,+WI+53066&output=embed",
+    embedSrc: "https://maps.google.com/maps?q=888+Thackeray+Trail+Suite+110,+Oconomowoc,+WI+53066&output=embed",
   },
 ];
 
