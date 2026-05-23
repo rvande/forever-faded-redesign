@@ -102,7 +102,7 @@ const localBusinessSchema = [
     image: `${SITE_URL}/dark-logo.png`,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "888 Thackeray Trail",
+      streetAddress: "888 Thackeray Trail, Suite 110",
       addressLocality: "Oconomowoc",
       addressRegion: "WI",
       postalCode: "53066",
