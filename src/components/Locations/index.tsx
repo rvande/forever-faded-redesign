@@ -21,7 +21,7 @@ const LOCATIONS: Location[] = [
     city: "Waukesha",
     address: ["1427 E Racine Ave #H,", "Waukesha, WI 53186"],
     mapsHref: "https://www.google.com/maps?cid=5172250936097981129",
-    bookHref: "https://getsquire.com/booking/brands/forever-faded-llc",
+    bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha",
     embedSrc: "https://maps.google.com/maps?cid=5172250936097981129&output=embed",
   },
   {
@@ -81,7 +81,7 @@ function LocationCard({ loc }: { loc: Location }) {
             href={loc.bookHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-block font-subheading text-base tracking-widest uppercase px-6 py-3 bg-gold text-black hover:bg-gold/90 shadow-[3px_3px_0px_0px_rgba(255,255,255,0.15)] transition-colors"
+            className="mt-5 self-start inline-block font-subheading text-base tracking-widest uppercase px-6 py-3 bg-gold text-black hover:bg-gold/90 shadow-[3px_3px_0px_0px_rgba(255,255,255,0.15)] transition-colors"
           >
             Book Here
           </a>
