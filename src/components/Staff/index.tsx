@@ -23,7 +23,7 @@ const STAFF: Member[] = [
   { name: "Cristian", role: "Barber", publicId: "DSC_6628_1_nqbfor",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/cristian-nellis/services" },
   { name: "Megan",    role: "Barber", publicId: "DSC_6553-2_fw0m56",              bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/megan-ewing/services" },
   { name: "Alexis",   role: "Barber", publicId: "DSC_6607-Enhanced-NR_xvnh4c",        bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/alexis-adams-2/services" },
-  { name: "Tim",      role: "Owner",  publicId: "Copy of DSC_6505-2_1_mtnk0z", bookHref: "mailto:tim.retic@retici.com", isOwner: true },
+  { name: "Tim",      role: "Owner | Master Barber | Visionary",  publicId: "Copy of DSC_6505-2_1_mtnk0z", bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/tim-retic/services", isOwner: true },
 ];
 
 function StaffCard({ member }: { member: Member }) {
@@ -58,7 +58,7 @@ function StaffCard({ member }: { member: Member }) {
           rel="noopener noreferrer"
           className="flex-1 text-center bg-black text-white font-subheading text-[10px] sm:text-[11px] tracking-widest uppercase py-2 hover:bg-gold hover:text-black transition-colors"
         >
-          {member.isOwner ? "Contact" : "Book"}
+          Book
         </a>
         <Link
           href={`/staff#${member.name.toLowerCase()}`}

@@ -82,11 +82,11 @@ const TEAM: TeamMemberData[] = [
   {
     name: "Tim",
     slug: "tim",
-    role: "Owner",
+    role: "Owner | Master Barber | Visionary",
     publicId: "Copy of DSC_6505-2_1_mtnk0z",
-    bio: "Timothy L Retic SR is the visionary owner behind Forever Faded Barbershop. While Tim's expertise as a Master Barber is unquestionable, he no longer cuts hair at Forever Faded. Instead, he focuses on the strategic direction of the business and mentoring his talented team of barbers who deliver exceptional service daily.\n\n While you won't find him behind the chair at Forever Faded, his influence and standards of excellence permeate every aspect of the barbershop experience.",
-    bookHref: "mailto:tim.retic@retici.com",
-    ctaLabel: "Contact Tim",
+    bio: "Timothy L. Retic Sr. is the founder and visionary owner of Forever Faded Barbershop. A highly experienced Master Barber, Tim continues to cut full time at the Waukesha location, where he maintains a full-time schedule serving clients and remaining closely connected to the people and community that helped build the Forever Faded brand.\n\nBeyond the chair, Tim leads the strategic direction of the company, mentors his talented team, and upholds the high standards of professionalism, consistency, and exceptional service that define the Forever Faded experience. His hands-on leadership ensures that every client who walks through the doors receives the quality, respect, and attention they deserve.\n\nTim's vision extends far beyond building a successful barbershop. His dream is to grow Forever Faded into a lasting legacy—one that creates careers, develops future barbers and entrepreneurs, expands educational and business opportunities, and makes a meaningful impact throughout the community. Every haircut, every relationship, and every new goal represents another step toward that larger mission.",
+    bookHref: "https://getsquire.com/booking/book/forever-faded-waukesha-waukesha/barber/tim-retic/services",
+    ctaLabel: "Book with Tim",
   },
 ];
 
